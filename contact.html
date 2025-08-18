@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand text-white fw-bold" href="#">
+      <img src="logo.png" alt="Logo" height="50">
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">SERVICES</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Option 1</a></li>
+            <li><a class="dropdown-item" href="#">Option 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- Right Side -->
+    <div class="d-flex align-items-center">
+      <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a>
+      <button class="plan-btn">PLAN MY EVENT</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-start" id="offcanvasNavbar">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-white">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">SERVICE</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">MORE</a></li>
+    </ul>
+  </div>
+</div>
+
+
+       <div class="container contact-section">
+    <div class="row align-items-start">
+
+      <!-- Left Column -->
+      <div class="col-md-12 col-lg-6 contact-left" style="font-style: italic;">
+        <img src="images/decor.jpg" alt="Event Image">
+        <h2 style="color: white;font-style: italic;margin-top: 40px;"><span style="color:#fcb336;">Contact us</span> now to be your event planner!</h2>
+        <div class="contact-info mt-4">
+          <p><i class="fab fa-whatsapp"></i> Contact : 8056801781 | 9150652996</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:enquiries@themectupsg.com" style="text-decoration: none;">info@webads.com</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> TamilNadu,Hosur</p>
+
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-12 col-lg-6 form-section ">
+        <h5 class="mb-4">Leave Your Contact Details</h5>
+     <form action="{{ route('send.email') }}" method="POST">
+        @csrf
+          <div class="mb-3">
+            <label class="form-label">Name *</label>
+            <input type="text" class="form-control" required name="name" >
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email *</label>
+            <input type="email" class="form-control" required name="email">
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <label class="form-label">Phone *</label>
+              <input type="tel" class="form-control" required name="phone">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Company *</label>
+              <input type="text" class="form-control" name="company">
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Event Type</label>
+            <select class="form-select" required name="event">
+                <option value=""></option>
+                <option>Dinner & Dance</option>
+                <option>MICE Event</option>
+                <option>Team Building</option>
+                <option>Design & Installation Services</option>
+                <option>Event Styling & Decor</option>
+                <option>Event Onsite Management</option>
+                <option>Physical & Virtual Entertainment</option>
+                <option>Customized Corporate Gifts</option>
+                <option>Overseas Retreat</option>
+                <option>Photography & Videography</option>
+                <option>Proposal</option>
+                <option>Picnic</option>
+                <option>Dessert Table</option>
+                <option>Picnic Basket</option>
+                <option>Room Decor</option>
+            </select>
+            </div>
+
+          <div class="mb-3">
+            <label class="form-label" >Budget</label>
+            <input type="text" class="form-control" required name="budget">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Your message *</label>
+            <textarea class="form-control" name="message"  rows="4"></textarea>
+          </div>
+          <div class="text-start">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="col-md-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.758638462867!2d77.8154751!3d12.729162599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae70c80bb05499%3A0xc93cc306df9a9d58!2sHAPPY%20EVENTS%20(%20Event%20Organiser%20Decorator%20)!5e0!3m2!1sen!2sin!4v1747289265803!5m2!1sen!2sin" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Us -->
+      <div class="col-lg-6 col-md-6 mb-4">
+        <h5>CONTACT US</h5>
+        <p><i class="fab fa-whatsapp"></i> Whatsapp: 87930476</p>
+        <p><i class="fas fa-envelope"></i> enquiries@themeetupsg.com</p>
+        <p>21 Bukit Batok Crescent,<br>
+        WCEGA Tower, #11-70,<br>
+        Singapore 658065</p>
+        <p>UEN: 202238467M</p>
+        <div class="payments mt-3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/PayNow_logo.png" alt="PayNow">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.png" alt="Amex">
+        </div>
+      </div>
+
+      <!-- More -->
+      <div class="col-lg-6 col-md-6 mb-4">
+        <h5>MORE</h5>
+        <div class="row">
+          <div class="col-6">
+            <p><a href="#">Awards & Features</a></p>
+            <p><a href="#">Corporate Social Responsibility</a></p>
+            <p><a href="#">Blog</a></p>
+            <div class="social-icons">
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col-6">
+            <p><a href="#">Hiring</a></p>
+            <p><a href="#">Referrals</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom text-center mt-3">
+      © 2025 TheMeetUpSG Pte Ltd | <a href="#">Privacy Policy</a> Website crafted by <a href="#">Pixel Mechanics</a>
+    </div>
+  </div>
+</footer>
+   
+
+</body>
+</html>
