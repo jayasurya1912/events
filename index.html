@@ -11,102 +11,131 @@
 <body>
 
 <!-- Navbar -->
- <nav class="navbar navbar-expand-lg custom-navbar">
+<nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
-    <!-- Logo -->
-    <a class="navbar-brand text-white fw-bold" href="#">
-      <img src="logo.png" alt="Logo" height="50">
-    </a>
-
-    <!-- Mobile Menu Button -->
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+    <a class="navbar-brand" href="#"><i class="fa-solid fa-headphones"></i> ECSTASY</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Desktop Menu -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">SERVICES</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Option 1</a></li>
-            <li><a class="dropdown-item" href="#">Option 2</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
-        
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Right Side -->
     <div class="d-flex align-items-center">
-      <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a>
-      <button class="plan-btn">PLAN MY EVENT</button>
+      <div class="social-icons me-3">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <a href="#contact" class="btn btn-outline-light">Get In Touch</a>
     </div>
   </div>
 </nav>
 
-<!-- Mobile Offcanvas Menu -->
-<div class="offcanvas offcanvas-start" id="offcanvasNavbar">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title text-white">Menu</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+<!-- Banner -->
+<section class="banner">
+  <div>
+    <h1 id="typingText">The Soul of <span>Music</span></h1>
+    <p id="subText">
+      Sec ac nibh vitae nibh vulputate interdum. Etiam fermentum, elit in metus scelerisque, 
+      vel euismod justo condimentum. Donec sit amet metus posuere neque dictum efficitur.
+    </p>
+    <a href="#events" class="btn btn-banner" id="ctaBtn">Upcoming Event</a>
   </div>
-  <div class="offcanvas-body">
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">SERVICE</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">MORE</a></li>
-    </ul>
-  </div>
-</div>
+</section>
 
-<!-- Mobile Offcanvas Menu -->
-<div class="offcanvas offcanvas-start" id="offcanvasNavbar">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title text-white">Menu</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-  </div>
-  <div class="offcanvas-body">
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">SERVICE</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">MORE</a></li>
-    </ul>
-  </div>
+
+<div class="container-fluid text-center" style="background-color: #ff0077; color: white;padding: 15px;">
+  <marquee behavior="" direction="" ><h1 style="font-weight: 700;">Experience the ultimate vibe at night—make your party unforgettable.</h1></marquee>
 </div>
 
 
+ 
+ <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Section -->
+        <div class="col-md-6 about-text">
+          <h2>A Few Words About <span>ECSTASY</span></h2>
+          <p>
+            Ut feugiat odio placerat dictum ultricies. Morbi a risus eu lectus posuere auctor ac ut turpis.
+            Curabitur laoreet luctus nunc, non dapibus velit elementum non. Aliquam diam massa, placerat
+            vel interdum eget, vulputate gravida orci. Aliquam egestas, nisi id interdum egestas, tortor felis
+            sagittis diam, at interdum risus orci cursus orci.Ut feugiat odio placerat dictum ultricies. Morbi a risus eu lectus posuere auctor ac ut turpis.
+            Curabitur laoreet luctus nunc, non dapibus velit elementum non. Aliquam diam massa, placerat
+            vel interdum eget, vulputate gravida orci. Aliquam egestas, nisi id interdum egestas, tortor felis
+            sagittis diam, at interdum risus orci cursus orci.
+          </p>
+          <button class="btn-custom">More About Band</button>
+        </div>
 
-<section class="hero-section">
+        <!-- Image Section -->
+        <div class="col-md-6 about-image">
+          <span class="music-note note1 text-white">🎵 🎵</span>
+          <div class="circle-wrapper">
+            <img src="https://images.pexels.com/photos/1236701/pexels-photo-1236701.jpeg" alt="About Image">
+          </div>
+          <span class="music-note note2">🎶 🎶</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<section class="event-section">
   <div class="container">
-    <div class="row align-items-center">
+    <h2 class="section-title">Event <span>List</span></h2>
+    <div class="row g-4 justify-content-center">
       
-      <!-- Left Content -->
-      <div class="col-lg-6 hero-text">
-        <h1>Let’s Make Your Events<br>Unforgettable</h1>
-        <p>From weddings to corporate gatherings, we bring creativity, precision, and a touch of elegance to every event we manage.</p>
-        <div class="hero-buttons">
-          <a href="#" class="btn btn-gold">Plan My Event</a>
-          <a href="#" class="btn btn-outline-gold">Browse Gallery</a>
+      <!-- Event Card 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="event-card position-relative">
+          <img src="images/cyberpunk-dj-illustration.jpg" alt="DJ Night Party">
+          <div class="event-date-badge">
+            NOV <br> 19
+          </div>
+          <div class="event-content">
+            <h5>DJ Night Party</h5>
+            <small>18 Nov 2025</small>
+          </div>
         </div>
       </div>
 
-      <!-- Right Video -->
-      <div class="col-lg-6 hero-video mt-4 mt-lg-0">
-        <video autoplay muted loop playsinline>
-          <source src="images/Events Company Video Teaser(720P_HD).mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <!-- Event Card 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="event-card position-relative">
+          <img src="images/cyberpunk-dj-illustration.jpg" alt="The Mission">
+          <div class="event-date-badge">
+            NOV <br> 19
+          </div>
+          <div class="event-content">
+            <h5>The Mission</h5>
+            <small>18 Nov 2025</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="event-card position-relative">
+          <img src="images/cyberpunk-dj-illustration.jpg" alt="Planet Ibiza">
+          <div class="event-date-badge">
+            NOV <br> 19
+          </div>
+          <div class="event-content">
+            <h5>Planet Ibiza</h5>
+            <small>18 Nov 2025</small>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -114,134 +143,36 @@
 </section>
 
 
-
-
-<section class="whyus-section">
-  <div class="container whyus-content">
-    <h2 class="whyus-title">WHY US?</h2>
-    <div class="row">
-      <div class="col-md-6 col-lg-3 whyus-box">
-        <div class="whyus-icon"><i class="fa-solid fa-calendar-check"></i></div>
-        <h4>All-in-one Event Management</h4>
-        <p>We offer comprehensive event planning services, ensuring that every aspect of your event is expertly managed, from concept to execution, turning dreams into reality.</p>
-      </div>
-      <div class="col-md-6 col-lg-3 whyus-box">
-        <div class="whyus-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <h4>Proven Track Record</h4>
-        <p>With experience dating back to our establishment in 2017, we bring a wealth of knowledge and expertise to every event we plan.</p>
-      </div>
-      <div class="col-md-6 col-lg-3 whyus-box">
-        <div class="whyus-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
-        <h4>Specialization in Corporate Events</h4>
-        <p>We specialize in creating custom-tailored corporate events, including MICE, Dinner & Dance, Networking Events, and Team Building sessions, and more.</p>
-      </div>
-      <div class="col-md-6 col-lg-3 whyus-box">
-        <div class="whyus-icon"><i class="fa-solid fa-award"></i></div>
-        <h4>Serving Renowned Clients</h4>
-        <p>Our track record includes serving both local and international clients, providing high-quality event planning services to businesses and organizations of all sizes.</p>
-      </div>
-    </div>
-    <a href="#" class="btn whyus-btn">EXPLORE MORE <i class="fa-solid fa-angle-double-right"></i></a>
-  </div>
-</section>
-
-
-<div class="container py-5" >
-
-    <div class="row">
-        <div class="col-md-12 col-lg-12">
-            <h1 style="font-size: 45px;text-align: center;color: white;"> Our <span style="color: #fcb336;">Services</span></h1>
-            <p style="font-size: 19px;text-align: justify;color: white;">At our core, we offer comprehensive event management services that cover every detail from start to finish. From initial planning and creative concept development to venue selection, vendor coordination, and seamless on-site execution, we ensure every aspect of your event runs flawlessly. Our team handles logistics, budgeting, technical setup, guest experience, and post-event analysis with precision and professionalism. Whether it’s a corporate gathering, product launch, gala dinner, or large-scale conference, we tailor each event to reflect your brand’s vision while delivering engaging and memorable experiences that leave a lasting impact.</p>
+ <section class="music-section">
+    <div class="container">
+      <h2 class="music-title">Music</h2>
+      <div class="row justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-md-4 col-sm-6 music-card">
+          <img src="images/medium-shot-rebellious-granny-singing.jpg" alt="Hip Hop">
+          <h5>Hip Hop</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-    </div>
-  <div class="row g-4 mt-5">
-    <!-- Card 1 -->
-    <div class="col-md-6">
-      <div class="service-card" >
-        <div class="bg-img" style="background-image: url('images/techone.jpg');"></div>
-        <div class="service-content" style="padding-top: 200px;">
-          <div class="service-title">3D Technology</div>
-          <div class="service-text">
-            3D Technology brings a futuristic and immersive experience to events, blending innovation with entertainment to captivate guests. With features like interactive 3D floors and eye-catching 3D holograms, it adds a new dimension to visual storytelling. The use of fog screens and digital backdrops creates magical, cinematic environments, perfect for unforgettable moments. Virtual events enable real-time engagement with audiences from anywhere, while creative additions like fish shells, human fountains, and robotic animals provide unique, high-tech attractions that elevate the event atmosphere and leave a lasting impression.
-          </div>
+        <!-- Card 2 -->
+        <div class="col-md-4 col-sm-6 music-card">
+          <img src="images/monochrome-view-person-playing-electric-guitar.jpg" alt="Rock">
+          <h5>Rock</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4 col-sm-6 music-card">
+          <img src="images/man-composing-song-guitar.jpg" alt="Classic">
+          <h5>Classic</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="col-md-6">
-      <div class="service-card" >
-        <div class="bg-img" style="background-image: url('images/fashionkid.jpg');"></div>
-        <div class="service-content" style="padding-top: 200px;">
-          <div class="service-title">Childrens Zone</div>
-          <div class="service-text">
-            The Children’s Zone is a vibrant and engaging space thoughtfully designed to create unforgettable moments for kids. It features a wide array of fun-filled activities and services including theme, balloon, and flower decorations that set the perfect atmosphere for celebration. Children are entertained with magic shows, party gifts, and delicious cakes, making the event lively and joyful. Special highlights such as naming ceremonies, kids fashion shows, and kids contests provide a platform for little ones to shine. Interactive experiences like the Children’s Day activity, Kids DJ party, and selfie booths add an extra layer of excitement.
-          </div>
-        </div>
+      <!-- Button -->
+      <div class="music-btn">
+        <button>Listen to Music</button>
       </div>
     </div>
+  </section>
 
-    <div class="col-md-6">
-      <div class="service-card" >
-        <div class="bg-img" style="background-image: url('images/wedpose.jpg');"></div>
-        <div class="service-content" style="padding-top: 200px;">
-          <div class="service-title">Wedding Management</div>
-          <div class="service-text">
-            Wedding Management services offer a comprehensive and personalized approach to making every couple's special day truly unforgettable. From the initial stages of wedding planning to selecting the perfect venue, every detail is thoughtfully curated. The service includes designing beautiful wedding invitations, stunning decorations, and professional photography to capture each magical moment. It also ensures a flawless bridal makeover, organizing vibrant sangeeth functions, heartfelt engagement ceremonies, and selecting memorable wedding gifts.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="service-card" >
-        <div class="bg-img" style="background-image: url('images/housewaming.jpg');"></div>
-        <div class="service-content" style="padding-top: 200px;">
-          <div class="service-title">Adult Zone</div>
-          <div class="service-text">
-            The Adult Zone is curated to celebrate life's special milestones and create cherished memories for adults. This space caters to a variety of events, including elegant baby showers, heartwarming anniversary celebrations, and exciting surprise parties that add a spark of joy to any occasion. It also includes housewarming functions, making new beginnings even more special. The area is enriched with thoughtful gifting options and engaging modelling activities, offering a blend of fun, elegance, and sentiment. Whether it's a personal celebration or a social gathering.
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-6">
-      <div class="service-card" >
-        <div class="bg-img" style="background-image: url('images/eventplace.jpg');"></div>
-        <div class="service-content" style="padding-top: 200px;">
-          <div class="service-title">Corparate Management</div>
-          <div class="service-text">
-           The Corporate Management zone is tailored for professional excellence, offering end-to-end solutions for a wide spectrum of business events. From sourcing the ideal venue to organizing impactful conferences and corporate branding activities, every detail is managed with precision. The zone supports vibrant celebrations, strategic trade fairs, and high-profile product launches, ensuring that each corporate moment is both meaningful and memorable. With stunning backdrops, well-planned day outs, and exclusive private parties, it balances professionalism with relaxation. Complemented by DJ music and grand outlet openings. 
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    
-
-    <!-- Card 4 -->
-    <div class="col-md-6">
-      <div class="service-card">
-        <div class="bg-img" style="background-image: url('images/joggler.jpg');"></div>
-        <div class="service-content" style="padding-top: 200px;">
-          <div class="service-title">Celebrity & Talent Management</div>
-          <div class="service-text ">
-            The Celebrity & Talent Management zone is a dynamic hub of entertainment, designed to captivate audiences and elevate any event to a spectacular level. This zone brings together an eclectic mix of talent, including mesmerizing magicians, skilled jugglers, versatile mimicry artists, and hilarious stand-up comedians. It also offers the glamour of celebrities, the thrill of fire and belly dancers, and the allure of international Russian artists. Adding musical flair with live bands and engaging visuals with cartoon models and caricature artists, this zone ensures an immersive experience an unforgettable spectacle of talent and charm.
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-
-  <div class="text-center mt-4">
-    <a href="{{ url('/service') }}" class="btn btn-enq">
-      Learn More →
-    </a>
-  </div>
-</div>
 
 
 <section class="review-section">
@@ -491,5 +422,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

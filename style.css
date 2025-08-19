@@ -55,42 +55,137 @@ body
     }
 
     /* Hero Section */
-    .hero-section {
-      background-color: #000; /* Dark background */
-      color: #d4af37; /* Gold text */
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 40px 15px;
+
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
     }
 
-    .hero-text {
-      max-width: 600px;
-      text-align: left;
+    /* Navbar */
+    .navbar {
+      padding: 20px 60px;
+      background: transparent;
+      transition: background 0.3s ease;
     }
 
-    .hero-text h1 {
-      font-size: 2.5rem;
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    .navbar-brand {
       font-weight: 700;
-      line-height: 1.2;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff;
+      margin: 0 12px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:hover {
+      color: #ff3366;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin-right: 15px;
+      transition: 0.3s;
+      font-size: 18px;
+    }
+
+    .social-icons a:hover {
+      color: #ff3366;
+    }
+
+    .btn-outline-light {
+      border-radius: 25px;
+      font-weight: 500;
+      padding: 8px 20px;
+      
+    }
+
+    /* Banner Section */
+    .banner {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                  url("images/cyberpunk-dj-illustration.jpg") center/cover no-repeat;
+      padding: 0 20px;
+    }
+
+    .banner h1 {
+      font-size: 4rem;
+      font-weight: 800;
       margin-bottom: 20px;
-      color: #d4af37;
     }
 
-    .hero-text p {
-      font-size: 1rem;
-      margin-bottom: 25px;
-      color: #f5f5f5;
+    .banner h1 span {
+      color: #4afcff;
     }
 
-    .hero-buttons .btn {
-      border-radius: 30px;
-      padding: 10px 22px;
-      font-weight: 600;
-      margin: 5px 8px 5px 0;
-      font-size: 0.9rem;
+    .banner p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #d6d6d6;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
     }
 
+    .btn-banner {
+      background: transparent;
+      border: 1px solid #fff;
+      border-radius: 25px;
+      color: #fff;
+      padding: 12px 30px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .btn-banner:hover {
+      background: #ff3366;
+      border-color: #ff3366;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .fade-in {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .banner h1 {
+        font-size: 2.5rem;
+      }
+      .banner p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .banner h1 {
+        font-size: 2rem;
+      }
+      .banner p {
+        font-size: 0.95rem;
+      }
+    }
+    
     .btn-outline-gold {
       border: 2px solid #d4af37;
       color: #d4af37;
@@ -139,118 +234,95 @@ body
         display: block;
       }
     }
-    .whyus-section {
-      background: url('images/childtwo.jpg') center center/cover no-repeat;
-      position: relative;
+     .about-section {
+      padding: 80px 0;
+    }
+
+    .about-text h2 {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .about-text h2 span {
       color: #fff;
-      padding: 20px 20px;
+      font-weight: 700;
     }
 
-    /* Dark Overlay */
-    .whyus-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-      z-index: 0;
+    .about-text p {
+      color: #bbb;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-top: 15px;
     }
 
-    .whyus-content {
+    .about-text .btn-custom {
+      margin-top: 20px;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .about-text .btn-custom:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .about-image {
+      position: relative;
+      text-align: center;
+    }
+
+    /* Perfect Circle Wrapper */
+    .circle-wrapper {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: auto;
+      border: 5px solid #111;
       position: relative;
       z-index: 2;
-      text-align: center;
     }
 
-    .whyus-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 50px;
-      color: #fff;
+    .circle-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* keeps perfect circle without stretching */
     }
 
-    .whyus-box {
-      text-align: center;
-      padding: 20px;
-      color: #fff;
+    /* Decorative Music Notes */
+    .music-note {
+      position: absolute;
+      font-size: 28px;
+      color: #ff2d75;
     }
 
-    /* Circle Icon */
-    .whyus-icon {
-      width: 90px;
-      height: 90px;
-      border: 2px solid #d4af37;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
+    .note1 {
+      top: 10px;
+      left: 20px;
+    }
+
+    .note2 {
+      bottom: -20px;
+      right: 0px;
       font-size: 32px;
-      color: #d4af37;
-      background: rgba(0,0,0,0.5);
-    }
-
-    .whyus-box h4 {
-      font-weight: 600;
-      margin-bottom: 15px;
       color: #fff;
     }
 
-    .whyus-box p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #ddd;
-    }
-
-    .whyus-btn {
-      background: #d4af37;
-      color: #000;
-      font-weight: bold;
-      padding: 12px 28px;
-      border: none;
-      margin-top: 40px;
-      transition: 0.3s;
-    }
-    .whyus-btn:hover {
-      background: #bfa033;
-      color: #fff;
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
-      .whyus-title {
-        font-size: 1.8rem;
-      }
-      .whyus-box {
-        margin-bottom: 30px;
-      }
-    }
       .about-section {
-      padding: 80px 0;
-      color: white;
-    }
-    .about-content h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: white;
-    }
-    .about-content p {
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 25px;
-      color: white;
-    }
-    .about-btn {
-      background: #d4af37;
-      color: #000;
-      font-weight: bold;
-      padding: 12px 28px;
-      border: none;
-      transition: 0.3s;
-    }
-    .about-btn:hover {
-      background: #bfa033;
-      color: #fff;
+        text-align: center;
+      }
+      .about-image {
+        margin-top: 30px;
+      }
+      .circle-wrapper {
+        width: 250px;
+        height: 250px;
+      }
     }
     /* Carousel Styling */
     .carousel-indicators [data-bs-target] {
@@ -273,12 +345,122 @@ body
         height: 250px;
       }
     }
+
+    .event-section {
+      position: relative;
+      background: url('images/dj.jpg') no-repeat center center/cover;
+      padding: 60px 0;
+    }
+    .event-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(208, 28, 97, 0.7); /* pink overlay */
+      z-index: 0;
+    }
+    .event-section .container {
+      position: relative;
+      z-index: 1;
+    }
+    /* Event cards */
+    .event-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .event-card:hover {
+      transform: translateY(-8px);
+    }
+    .event-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .event-content {
+      padding: 15px;
+      color: black;
+    }
+    .event-content h5 {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .event-date-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #fff;
+      color: #111;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 13px;
+    }
+    .section-title {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .section-title span {
+      color: #4afcff; /* gold for highlight */
+    }
      .service-card {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
     color: white;
   }
+  .music-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .music-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+    .music-card {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .music-card img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      transition: transform 0.4s ease-in-out;
+    }
+    .music-card img:hover {
+      transform: scale(1.05);
+    }
+    .music-card h5 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .music-card p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .music-btn {
+      margin-top: 30px;
+    }
+    .music-btn button {
+      border-radius: 50px;
+      padding: 10px 25px;
+      border: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+    .music-btn button:hover {
+      background: #fff;
+      color: #111;
+    }
 
   .bg-img {
     background-size: cover;
@@ -543,71 +725,52 @@ body
       pointer-events: none;
     }
 
-.contact-section {
-      padding: 50px 20px;
-    }
-
-    .contact-left {
-      padding-right: 30px;
-    }
-
-    .contact-left h2 {
-      font-size: 32px;
-    }
-
-    .contact-left span {
-      color: #ff3b3f;
-    }
-
-    .contact-left img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .contact-info p, .contact-info a {
-      color: #fff;
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    .form-control, .form-select {
-      border: none;
-      border-bottom: 1px solid black;
-      border-radius: 0;
-      background-color: transparent;
-      color: #000;
-    }
-
-    .form-control:focus, .form-select:focus {
-      box-shadow: none;
-      border-bottom: 2px solid #ff3b3f;
-    }
-
-    .form-label {
-
-      color: #000;
-    }
-
-    .submit-btn {
-      background-color: #fcb336;
-      border: none;
+ .contact-section {
+      padding: 60px 0;
+      background: black;
       color: black;
-      padding: 10px 30px;
-      font-weight: bold;
-      text-transform: uppercase;
     }
-
-    .form-section {
+    .contact-info {
       background: #fff;
       padding: 30px;
-      border-radius: 5px;
-      color: #000;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      color: black;
     }
-
-    @media (max-width: 768px) {
-      .contact-left {
-        margin-bottom: 30px;
-        padding-right: 0;
-      }
+    .contact-img {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .contact-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-color: white;
+      padding: 10px;
+    }
+    .btn-submit {
+      background: #ff4b5c;
+      color: #fff;
+      font-weight: 600;
+    }
+    .btn-submit:hover {
+      background: #e13b4a;
+      color: #fff;
+    }
+    .contact-banner {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('images/cyberpunk-dj-illustration.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 90px 20px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+    .contact-banner h1 {
+      font-size: 42px;
+      font-weight: 700;
+    }
+    .contact-banner p {
+      font-size: 18px;
+      opacity: 0.9;
     }
