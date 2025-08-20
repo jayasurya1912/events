@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Music</title>
+</head>
+<body>
+
+  <audio id="bg-music" autoplay loop muted>
+    <source src="images/backmuic.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    music.volume = 0.2; // low volume
+
+    // Unmute and play after first user interaction
+    function enableMusic() {
+      music.muted = false;
+      music.play().catch(err => console.log("Autoplay blocked:", err));
+      document.removeEventListener("click", enableMusic);
+      document.removeEventListener("touchstart", enableMusic);
+    }
+
+    document.addEventListener("click", enableMusic);
+    document.addEventListener("touchstart", enableMusic);
+  </script>
+
+</body>
+</html>
