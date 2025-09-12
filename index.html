@@ -15,17 +15,32 @@
   
     <audio id="bg-music" src="images/backmuic.mp3" autoplay loop muted></audio>
   
-
+<div id="preloader">
+    <div class="vinyl"></div>
+    <div class="equalizer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="dj-text">Loading Beats...</div>
+  </div>
 
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
+    <!-- Brand -->
     <a class="navbar-brand" href="#"><i class="fa-solid fa-headphones"></i> WEBADS</a>
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+    <!-- Toggler -->
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -34,7 +49,9 @@
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
-    <div class="d-flex align-items-center">
+
+    <!-- Right Section -->
+    <div class="d-none d-lg-flex align-items-center">
       <div class="social-icons me-3">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -45,15 +62,41 @@
   </div>
 </nav>
 
+<!-- ✅ Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"><i class="fa-solid fa-headphones"></i> WEBADS</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+    <hr class="bg-light">
+    <div class="social-icons mt-3">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <a href="#contact" class="btn btn-outline-light w-100 mt-3">Get In Touch</a>
+  </div>
+</div>
+
+
+
+
 <!-- Banner -->
 <section class="banner">
   <div>
     <h1 id="typingText">The Soul of <span>Music</span></h1>
     <p id="subText">
-      Sec ac nibh vitae nibh vulputate interdum. Etiam fermentum, elit in metus scelerisque, 
-      vel euismod justo condimentum. Donec sit amet metus posuere neque dictum efficitur.
+      Music is more than just sound — it’s an experience that connects hearts, sparks emotions, and creates unforgettable moments.
     </p>
-    <a href="#events" class="btn btn-banner" id="ctaBtn">Upcoming Event</a>
+    <a href="#events" class="btn btn-banner" id="ctaBtn">Book Now</a>
   </div>
 </section>
 
@@ -69,15 +112,9 @@
       <div class="row align-items-center">
         <!-- Text Section -->
         <div class="col-md-6 about-text" data-aos="zoom-in">
-          <h2>A Few Words About <span>WEBADS</span></h2>
-          <p>
-            Ut feugiat odio placerat dictum ultricies. Morbi a risus eu lectus posuere auctor ac ut turpis.
-            Curabitur laoreet luctus nunc, non dapibus velit elementum non. Aliquam diam massa, placerat
-            vel interdum eget, vulputate gravida orci. Aliquam egestas, nisi id interdum egestas, tortor felis
-            sagittis diam, at interdum risus orci cursus orci.Ut feugiat odio placerat dictum ultricies. Morbi a risus eu lectus posuere auctor ac ut turpis.
-            Curabitur laoreet luctus nunc, non dapibus velit elementum non. Aliquam diam massa, placerat
-            vel interdum eget, vulputate gravida orci. Aliquam egestas, nisi id interdum egestas, tortor felis
-            sagittis diam, at interdum risus orci cursus orci.
+          <h2>A Few Words About <span>Dj Naveen</span></h2>
+          <p style="text-align: justify;">
+            I’m DJ Naveen, a passionate DJ and music producer from India who believes music is more than just sound — it’s an energy, a story, and a vibe that connects people. Specializing in EDM, Bollywood, and Tamil remixes, I bring a unique blend of local flavors and global beats to every performance, keeping the crowd on their feet from the first track to the last. Whether it’s a club night, a festival, or a private celebration, my mission is to create unforgettable moments filled with pure vibes, turning every event into an electrifying experience.
           </p>
           <button class="btn-custom">More About Band</button>
         </div>
@@ -107,11 +144,11 @@
         <div class="event-card position-relative">
           <img src="images/djfive.jpg" alt="DJ Night Party">
           <div class="event-date-badge">
-            NOV <br> 19
+            01
           </div>
           <div class="event-content">
-            <h5>DJ Night Party</h5>
-            <small>18 Nov 2025</small>
+            <h5 style="text-align: center;">Crowd-Centric Approach</h5>
+            <p style="text-align: justify;">Your vibe is our priority. Whether it’s a club night, wedding, festival, or private event, we tailor every set to match the energy of the audience and keep the celebration alive.</p>
           </div>
         </div>
       </div>
@@ -121,11 +158,11 @@
         <div class="event-card position-relative">
           <img src="images/djsix.jpg" alt="The Mission">
           <div class="event-date-badge">
-            NOV <br> 19
+            02
           </div>
           <div class="event-content">
-            <h5>The Mission</h5>
-            <small>18 Nov 2025</small>
+            <h5 style="text-align: center;">Unique Mixes</h5>
+            <p style="text-align: justify;">From EDM to Bollywood and Tamil remixes, we bring a fusion of global sounds and local flavors, ensuring the  every performance is the fresh,energetic,vibe and unforgettable.</small>
           </div>
         </div>
       </div>
@@ -135,11 +172,11 @@
         <div class="event-card position-relative">
           <img src="images/djseven.jpg" alt="Planet Ibiza">
           <div class="event-date-badge">
-            NOV <br> 19
+            03
           </div>
           <div class="event-content">
-            <h5>Planet Ibiza</h5>
-            <small>18 Nov 2025</small>
+            <h5 style="text-align: center;">Passion for Music</h5>
+            <p style="text-align: justify;">We don’t just play tracks — we craft experiences. Every beat, drop, and transition is designed to create an atmosphere where the crowd connects with the music on a deeper level.</p>
           </div>
         </div>
       </div>
@@ -157,7 +194,7 @@
       <div class="col-md-3 col-sm-6" data-aos="flip-right">
         <div class="specialised-card">
           <img src="images/djone.jpg" alt="">
-          <div class="specialised-caption">DJ And DJ Setup</div>
+          <div class="specialised-caption">Resident DJ</div>
         </div>
       </div>
 
@@ -192,7 +229,7 @@
       <div class="col-md-3 col-sm-6" data-aos="flip-right">
         <div class="specialised-card">
           <img src="images/djsix.jpg" alt="">
-          <div class="specialised-caption">Star Night</div>
+          <div class="specialised-caption">College & School Events</div>
         </div>
       </div>
 
@@ -222,20 +259,20 @@
         <!-- Card 1 -->
         <div class="col-md-4 col-sm-6 music-card" data-aos="fade-up">
           <img src="images/singing.jpg" alt="Hip Hop">
-          <h5>Hip Hop</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5>Hip Hop DJ</h5>
+          <p style="font-size: 18px;">Dropping beats that bring Hip Hop culture alive on the dance floor.</p>
         </div>
         <!-- Card 2 -->
         <div class="col-md-4 col-sm-6 music-card" data-aos="fade-up">
           <img src="images/guiter.jpg" alt="Rock">
-          <h5>Rock</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5>Rock DJ</h5>
+          <p style="font-size: 18px;">Fueling the night with electrifying rock beats and unstoppable energy.</p>
         </div>
         <!-- Card 3 -->
         <div class="col-md-4 col-sm-6 music-card" data-aos="fade-up">
           <img src="images/flute.jpg" alt="Classic">
-          <h5>Classic</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5>Classical DJ</h5>
+          <p style="font-size: 18px;">Blending the timeless classical melodies with the modern DJ vibes.</p>
         </div>
       </div>
       <!-- Button -->
@@ -248,24 +285,26 @@
 
   <section class="dj-section text-center">
   <div class="container">
-    <h2 class="mb-5 text-white fw-bold">Most Popular DJ’s Profile</h2>
+    <h2 class="mb-5 text-white fw-bold">Most Popular Our DJ Profile</h2>
     <div class="row g-4" style="background-color: #111;">
       <!-- Left Gallery -->
       <div class="col-lg-6">
         <div class="row g-3">
-          <div class="col-6" data-aos="zoom-in"><img src="images/djfiver.jpg" class="gallery-img" alt=""></div>
-          <div class="col-6" data-aos="zoom-in"><img src="images/djsixer.jpg" class="gallery-img" alt=""></div>
-          <div class="col-6" data-aos="zoom-in"><img src="images/djsevener.jpg" class="gallery-img" alt=""></div>
-          <div class="col-6" data-aos="zoom-in"><img src="images/djnine.jpg" class="gallery-img" alt=""></div>
+          <div class="col-12" data-aos="zoom-in"><img src="images/ff.jpg" class="gallery-img" width="100%" alt=""></div>
+          
         </div>
       </div>
 
       <!-- Right Profile Card -->
       <div class="col-lg-6">
         <div class="profile-card">
-          <h3>ANIKA MOLLIK</h3>
+          <h3>DJ Naveen</h3>
           <h6>DUBSTEP</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Do eiusmod tempor enim minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Do eiusmod tempor enim minim veniam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Do eiusmod tempor enim minim veniam.</p>
+          <p style="text-align: justify;line-height: 1.8; font-size: 18px;"> 
+ 	
+I started my journey as a DJ with nothing but a deep love for music and the energy it brings to people. In the beginning, I was just experimenting—remixing tracks for friends, playing at small gatherings, and learning how every beat can change the mood of a crowd. The more I played, the more I realized that music was my true calling.
+
+From those small beginnings, I worked my way up by practicing day and night, exploring different genres, and understanding how to blend sounds that connect with people. What started as a hobby soon became my passion and profession. Today, every stage I perform on is a reminder of why I began—to create vibes, spread energy, and make every beat unforgettable.</p>
 
           <div class="profile-stats">
             <div class="stat">
@@ -306,7 +345,7 @@
           <div class="review-header">
             <img src="https://i.pravatar.cc/55?img=1" alt="Reviewer">
             <div>
-              <h5>Rohit Sharma</h5>
+              <h5 class="text-dark">Rohit Sharma</h5>
               <div class="star-rating">
                 ★★★★★
               </div>
@@ -324,7 +363,7 @@
           <div class="review-header">
             <img src="https://i.pravatar.cc/55?img=2" alt="Reviewer">
             <div>
-              <h5>Priya Mehta</h5>
+              <h5 class="text-dark">Priya Mehta</h5>
               <div class="star-rating">
                 ★★★★★
               </div>
@@ -342,7 +381,7 @@
           <div class="review-header">
             <img src="https://i.pravatar.cc/55?img=3" alt="Reviewer">
             <div>
-              <h5>Arjun Nair</h5>
+              <h5 class="text-dark">Arjun Nair</h5>
               <div class="star-rating">
                 ★★★★☆
               </div>
@@ -451,34 +490,45 @@
       <div class="col-lg-6">
         <div class="form-wrapper">
           <h2>Plan Your Event</h2>
-          <form>
+           <form id="djForm">
             <div class="mb-3">
               <label class="form-label">Full Name</label>
-              <input type="text" class="form-control" placeholder="Enter your name">
+              <input type="text" class="form-control" id="fullName" placeholder="Enter your name" required>
             </div>
+            
             <div class="mb-3">
               <label class="form-label">Email Address</label>
-              <input type="email" class="form-control" placeholder="Enter your email">
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
             </div>
+            
             <div class="mb-3">
               <label class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" placeholder="Enter your phone number">
+              <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
             </div>
+            
             <div class="mb-3">
               <label class="form-label">Event Type</label>
-              <select class="form-select">
-                <option>Wedding</option>
-                <option>Corporate Event</option>
-                <option>Birthday Party</option>
-                <option>Concert</option>
+              <select class="form-select" id="eventType" required>
+                <option value="Wedding">Wedding</option>
+                <option value="Corporate Event">Corporate Event</option>
+                <option value="Birthday Party">Birthday Party</option>
+                <option value="Concert">Concert</option>
               </select>
             </div>
+
+            <div class="mb-3">
+              <label class="form-label">Event Date</label>
+              <input type="date" class="form-control" id="eventDate" required>
+            </div>
+            
             <div class="mb-3">
               <label class="form-label">Message</label>
-              <textarea class="form-control" rows="4" placeholder="Tell us about your event"></textarea>
+              <textarea class="form-control" rows="4" id="message" placeholder="Tell us about your event"></textarea>
             </div>
+            
             <button type="submit" class="btn-submit">Submit Now</button>
           </form>
+
         </div>
       </div>
 
@@ -490,59 +540,87 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <!-- Contact Us -->
-      <div class="col-lg-6 col-md-6 mb-4">
-        <h5>CONTACT US</h5>
-        <p><i class="fab fa-whatsapp"></i> Whatsapp: 87930476</p>
-        <p><i class="fas fa-envelope"></i> enquiries@themeetupsg.com</p>
-        <p>21 Bukit Batok Crescent,<br>
-        WCEGA Tower, #11-70,<br>
-        HOSUR 658065</p>
-        <p>UEN: 202238467M</p>
-        <div class="payments mt-3">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/PayNow_logo.png" alt="PayNow">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.png" alt="Amex">
+      <!-- Logo + Caption -->
+      <div class="col-lg-4 col-md-6 mb-4 text-center text-lg-start">
+        <img src="images/logo.png" alt="Webads Logo" class="footer-logo mb-2">
+        <p class="footer-caption">Turning music & creativity into unforgettable vibes.</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
 
-      <!-- More -->
-      <div class="col-lg-6 col-md-6 mb-4">
-        <h5>MORE</h5>
-        <div class="row">
-          <div class="col-6">
-            <p><a href="#">Awards & Features</a></p>
-            <p><a href="#">Corporate Social Responsibility</a></p>
-            <p><a href="#">Blog</a></p>
-            <div class="social-icons">
-              <a href="#"><i class="fas fa-envelope"></i></a>
-              <a href="#"><i class="fab fa-whatsapp"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-tiktok"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-          <div class="col-6">
-            <p><a href="#">Hiring</a></p>
-            <p><a href="#">Referrals</a></p>
-          </div>
-        </div>
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6 mb-4 text-center text-lg-start">
+        <h5>QUICK LINKS</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="col-lg-4 col-md-12 mb-4 text-center text-lg-start">
+        <h5>CONTACT US</h5>
+        <p><i class="fab fa-whatsapp"></i> Whatsapp: 8825577570</p>
+        <p><i class="fas fa-envelope"></i> naveen.nalin98@gmail.com</p>
       </div>
     </div>
 
     <!-- Bottom -->
     <div class="footer-bottom text-center mt-3">
-      © 2025 Webads Ltd | <a href="#">Privacy Policy</a> Website crafted by <a href="#">Webads</a>
+      © 2025 Webads Ltd | <a href="#">Privacy Policy</a> | Website crafted by <a href="#">Webads</a>
     </div>
   </div>
 </footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
     AOS.init();
     </script> 
+      <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 500); // Delay for smoothness
+    });
+  </script>
+  <!-- Include EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  emailjs.init("56GaytYPcQ-rMCVzx"); // 🔑 Replace with your EmailJS Public Key
+
+  document.getElementById("djForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const templateParams = {
+      fullName: document.getElementById("fullName").value,
+      email: document.getElementById("email").value,
+      phoneNumber: document.getElementById("phoneNumber").value,
+      eventType: document.getElementById("eventType").value,
+      eventDate: document.getElementById("eventDate").value,
+      message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_6ogqrh9", "template_hfjic22", templateParams)
+      .then(function (response) {
+        alert("✅ Thank you for contacting us. We’ll get back to you soon!");
+        document.getElementById("djForm").reset();
+      }, function (error) {
+        alert("❌ Failed to send: " + JSON.stringify(error));
+      });
+  });
+</script>
+
 <script src="script.js"></script>
 </body>
 </html>

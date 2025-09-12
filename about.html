@@ -11,13 +11,30 @@
 </head>
 <body>
 
-   <nav class="navbar navbar-expand-lg ">
+  <div id="preloader">
+    <div class="vinyl"></div>
+    <div class="equalizer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="dj-text">Loading Beats...</div>
+  </div>
+
+   <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
+    <!-- Brand -->
     <a class="navbar-brand" href="#"><i class="fa-solid fa-headphones"></i> WEBADS</a>
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+    <!-- Toggler -->
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -26,7 +43,9 @@
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
-    <div class="d-flex align-items-center">
+
+    <!-- Right Section -->
+    <div class="d-none d-lg-flex align-items-center">
       <div class="social-icons me-3">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -36,6 +55,30 @@
     </div>
   </div>
 </nav>
+
+<!-- ✅ Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"><i class="fa-solid fa-headphones"></i> WEBADS</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+    <hr class="bg-light">
+    <div class="social-icons mt-3">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <a href="#contact" class="btn btn-outline-light w-100 mt-3">Get In Touch</a>
+  </div>
+</div>
 
 <div class="contact-banner">
       <h1>About Us</h1>
@@ -48,14 +91,8 @@
         <!-- Text Section -->
         <div class="col-md-6 about-text" data-aos="zoom-in">
           <h2>A Few Words About <span>WEBADS</span></h2>
-          <p>
-            Ut feugiat odio placerat dictum ultricies. Morbi a risus eu lectus posuere auctor ac ut turpis.
-            Curabitur laoreet luctus nunc, non dapibus velit elementum non. Aliquam diam massa, placerat
-            vel interdum eget, vulputate gravida orci. Aliquam egestas, nisi id interdum egestas, tortor felis
-            sagittis diam, at interdum risus orci cursus orci.Ut feugiat odio placerat dictum ultricies. Morbi a risus eu lectus posuere auctor ac ut turpis.
-            Curabitur laoreet luctus nunc, non dapibus velit elementum non. Aliquam diam massa, placerat
-            vel interdum eget, vulputate gravida orci. Aliquam egestas, nisi id interdum egestas, tortor felis
-            sagittis diam, at interdum risus orci cursus orci.
+          <p style="text-align: justify;">
+            I’m DJ Naveen, a passionate DJ and music producer from India. Music has always been more than just sound for me—it’s an energy, a story, and a vibe that connects people. Specializing in EDM, Bollywood, and Tamil remixes, I love blending local flavors with global beats to create performances that keep the crowd moving from start to finish. Whether it’s a club night, festival, or private event, my goal is simple: to turn every set into an unforgettable experience.From intimate private parties to high-energy clubs and grand music festivals, I’ve turned countless events into unforgettable nights. Every track I play is carefully curated to build a journey of beats, drops, and transitions that speak directly to the audience.
           </p>
           <button class="btn-custom">More About Band</button>
         </div>
@@ -86,8 +123,8 @@
           <div class="offer-item">
             <img src="images/djfiver.jpg" alt="offer">
             <div class="offer-content">
-              <h5>Lighting Setup</h5>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem is that.</p>
+              <h5>Lighting DJ Mashup</h5>
+              <p>Where music meets magic — our Lighting DJ Mashups combine powerful beats with stunning visual effects to create an electrifying atmosphere.</p>
             </div>
           </div>
         </div>
@@ -96,7 +133,7 @@
             <img src="images/djsixer.jpg" alt="offer">
             <div class="offer-content">
               <h5>Floor Lightning</h5>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem is that.</p>
+              <p>Transform your dance floor into a glowing stage! With dynamic LED floor lighting that syncs to the beats, every step becomes part of the show.</p>
             </div>
           </div>
         </div>
@@ -105,7 +142,7 @@
             <img src="images/djsevener.jpg" alt="offer">
             <div class="offer-content">
               <h5>Mix Up Dj</h5>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem is that.</p>
+              <p>A perfect fusion of genres, styles, and vibes — our Mix Up DJ sets bring together EDM, Hip Hop, Bollywood, Tamil remixes, and Rock to keep the crowd guessing and the energy flowing.</p>
             </div>
           </div>
         </div>
@@ -114,7 +151,7 @@
             <img src="images/djnine.jpg" alt="offer">
             <div class="offer-content">
               <h5>Times Lapse Dj </h5>
-              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem is that.</p>
+              <p>Times Lapse DJ specializes in creating immersive musical journeys that keep your guests entertained from the first beat to the last track.</p>
             </div>
           </div>
         </div>
@@ -192,53 +229,44 @@
 </section>
 
 
-  <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="row">
-      <!-- Contact Us -->
-      <div class="col-lg-6 col-md-6 mb-4">
-        <h5>CONTACT US</h5>
-        <p><i class="fab fa-whatsapp"></i> Whatsapp: 87930476</p>
-        <p><i class="fas fa-envelope"></i> enquiries@themeetupsg.com</p>
-        <p>21 Bukit Batok Crescent,<br>
-        WCEGA Tower, #11-70,<br>
-        Hosur 658065</p>
-        <p>UEN: 202238467M</p>
-        <div class="payments mt-3">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/PayNow_logo.png" alt="PayNow">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.png" alt="Amex">
+      <!-- Logo + Caption -->
+      <div class="col-lg-4 col-md-6 mb-4 text-center text-lg-start">
+        <img src="images/logo.png" alt="Webads Logo" class="footer-logo mb-2">
+        <p class="footer-caption">Turning music & creativity into unforgettable vibes.</p>
+        <div class="social-icons mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
 
-      <!-- More -->
-      <div class="col-lg-6 col-md-6 mb-4">
-        <h5>MORE</h5>
-        <div class="row">
-          <div class="col-6">
-            <p><a href="#">Awards & Features</a></p>
-            <p><a href="#">Corporate Social Responsibility</a></p>
-            <p><a href="#">Blog</a></p>
-            <div class="social-icons">
-              <a href="#"><i class="fas fa-envelope"></i></a>
-              <a href="#"><i class="fab fa-whatsapp"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-tiktok"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-          <div class="col-6">
-            <p><a href="#">Hiring</a></p>
-            <p><a href="#">Referrals</a></p>
-          </div>
-        </div>
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6 mb-4 text-center text-lg-start">
+        <h5>QUICK LINKS</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="col-lg-4 col-md-12 mb-4 text-center text-lg-start">
+        <h5>CONTACT US</h5>
+        <p><i class="fab fa-whatsapp"></i> Whatsapp: 8825577570</p>
+        <p><i class="fas fa-envelope"></i> naveen.nalin98@gmail.com</p>
       </div>
     </div>
 
     <!-- Bottom -->
     <div class="footer-bottom text-center mt-3">
-      © 2025 Webads Ltd | <a href="#">Privacy Policy</a> Website crafted by <a href="#">Webads</a>
+      © 2025 Webads Ltd | <a href="#">Privacy Policy</a> | Website crafted by <a href="#">Webads</a>
     </div>
   </div>
 </footer>
@@ -247,5 +275,7 @@
     <script>
     AOS.init();
     </script> 
+
+    <script src="script.js"></script>
 </body>
 </html>

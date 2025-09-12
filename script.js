@@ -1,4 +1,12 @@
 window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }, 500); // Delay for smoothness
+    });
+    
+
+window.addEventListener("load", () => {
   const music = document.getElementById("bg-music");
   music.volume = 0.2; // 20% volume
 
