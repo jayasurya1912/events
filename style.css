@@ -388,10 +388,7 @@ body
       transition: all 0.3s ease;
     }
 
-    .about-text .btn-custom:hover {
-      background: #fff;
-      color: #000;
-    }
+  
 
     .about-image {
       position: relative;
@@ -581,7 +578,11 @@ body
       color: #fff;
       transition: all 0.3s ease-in-out;
     }
-    .music-btn button:hover {
+    .music-btn a
+    {
+      color: white;
+    }
+    .music-btn button a :hover {
       background: #fff;
       color: #111;
     }
@@ -799,7 +800,7 @@ body
 .footer .social-icons {
   display: flex;
   gap: 15px;
-  justify-content: center;
+  
 }
 
 .footer .social-icons a {
